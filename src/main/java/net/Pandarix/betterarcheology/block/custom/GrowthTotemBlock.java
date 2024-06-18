@@ -3,14 +3,16 @@ package net.Pandarix.betterarcheology.block.custom;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.FlowerBlock;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -19,16 +21,14 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class GrowthTotemBlock extends FlowerBlock
 {
 
-    public GrowthTotemBlock(StatusEffect suspiciousStewEffect, int effectDuration, Settings settings)
+    public GrowthTotemBlock(RegistryEntry<StatusEffect> suspiciousStewEffect, int effectDuration, Settings settings)
     {
         super(suspiciousStewEffect, effectDuration, settings);
     }
@@ -112,9 +112,9 @@ public class GrowthTotemBlock extends FlowerBlock
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options)
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options)
     {
-        super.appendTooltip(stack, world, tooltip, options);
         tooltip.add(Text.translatable("block.betterarcheology.growth_totem_tooltip").formatted(Formatting.DARK_GREEN));
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

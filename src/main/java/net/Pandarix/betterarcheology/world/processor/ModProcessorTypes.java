@@ -1,5 +1,5 @@
 package net.Pandarix.betterarcheology.world.processor;
-
+/*
 import com.yungnickyoung.minecraft.yungsapi.api.autoregister.AutoRegister;
 import net.Pandarix.betterarcheology.BetterArcheology;
 import net.minecraft.registry.Registries;
@@ -17,3 +17,4 @@ public class ModProcessorTypes
         WATERLOGFIX_PROCESSOR = Registry.register(Registries.STRUCTURE_PROCESSOR, new Identifier(BetterArcheology.MOD_ID, "waterlogfix_processor"), () -> WaterlogFixProcessor.CODEC);
     }
 }
+*/

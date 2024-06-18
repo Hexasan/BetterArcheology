@@ -43,9 +43,6 @@
           }
         }
       ]
-    },
-    {
-      "processor_type": "betterarcheology:waterlogfix_processor"
     }
   ]
 }

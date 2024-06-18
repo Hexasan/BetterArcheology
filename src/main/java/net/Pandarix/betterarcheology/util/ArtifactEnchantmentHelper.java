@@ -1,16 +1,10 @@
 package net.Pandarix.betterarcheology.util;
 
-import dev.emi.trinkets.api.TrinketComponent;
-import dev.emi.trinkets.api.TrinketsApi;
 import net.Pandarix.betterarcheology.enchantment.ModEnchantments;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ElytraItem;
-
-import java.util.Objects;
-import java.util.Optional;
 
 public class ArtifactEnchantmentHelper
 {
@@ -27,7 +21,7 @@ public class ArtifactEnchantmentHelper
         {
             return true;
         }
-
+        /*
         // IF TRINKETS is installed, check for back-slot (used by ElytraSlot mod)
         if (FabricLoader.getInstance().isModLoaded("elytraslot"))
         {
@@ -46,7 +40,7 @@ public class ArtifactEnchantmentHelper
                     );
                 }
             }
-        }
+        }*/
         // if nothing succeeded, false
         return false;
     }

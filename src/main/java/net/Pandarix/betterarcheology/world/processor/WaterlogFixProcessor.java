@@ -1,5 +1,6 @@
 package net.Pandarix.betterarcheology.world.processor;
 
+/*
 import com.mojang.serialization.Codec;
 import com.yungnickyoung.minecraft.yungsapi.world.structure.processor.ISafeWorldModifier;
 import net.minecraft.block.BlockState;
@@ -16,26 +17,27 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkSection;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
+*/
 
 /**
  * A patchwork fix for https://bugs.mojang.com/browse/MC-130584.
  *
  * @author yungnickyoung
  */
+/*
 public class WaterlogFixProcessor extends StructureProcessor implements ISafeWorldModifier
 {
     public static final WaterlogFixProcessor INSTANCE = new WaterlogFixProcessor();
     public static final Codec<WaterlogFixProcessor> CODEC = Codec.unit(() -> INSTANCE);
-
+*/
     /**
      * Workaround for https://bugs.mojang.com/browse/MC-130584
      * Due to a hardcoded field in Templates, any waterloggable blocks in structures replacing water in the world will become waterlogged.
      * Idea of workaround is detect if we are placing a waterloggable block and if so, remove the water in the world instead.
      */
-    @Nullable
+    /*
     @Override
     public StructureTemplate.StructureBlockInfo process(WorldView levelReader,
                                                         BlockPos jigsawPiecePos,
@@ -101,3 +103,4 @@ public class WaterlogFixProcessor extends StructureProcessor implements ISafeWor
         return ModProcessorTypes.WATERLOGFIX_PROCESSOR;
     }
 }
+*/
